@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Proyecto Melon.</title>
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen, projection">
+
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection"> 
+<link rel="stylesheet" href="css/autosuggest.css" type="text/css" media="screen, projection"> 
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/autosuggest.js"></script>
+<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="js/bootstrap-alerts.js"></script>
+
+<script type="text/javascript">         
+
+function resize(){ 
+var windowheight = window.screen.height; 
+var frame = document.getElementById("sidebar");
+frame.style.height = windowheight + "px"; 
+} 
+
+var data = {items: [
+{value: "21", name: "Alambre de Cobre"},
+{value: "43", name: "Tubo asi bien pro"},
+{value: "46", name: "Cosa Ferretera"},
+{value: "54", name: "Interruptor Locochon"},
+{value: "55", name: "Manguera asi largota"},
+{value: "79", name: "Cosa Ferretera 2"}
+]};
+
+$(function(){
+	$("#venta_buscaproducto").autoSuggest(data.items, {selectedItemProp: "name", searchObjProps: "name"});
+});
+
+</script>
+
+</head>
+
+<body onload="resize()" onresize="resize()">
+<div class="topbar-wrapper" style="z-index: 5;">
+	<div class="topbar" data-dropdown="dropdown">
+    	<div class="topbar-inner">
+        	<div class="container">
+            	<div id="logo"></div>
+            	<h3 class="project_title"><a href="#">Administrador de Inventarios</a></h3>
+          		
+          
+          <ul class="nav secondary-nav">          
+          		<li class="dropdown">
+              	<a href="#" class="dropdown-toggle">Opciones</a>
+              		<ul class="dropdown-menu">
+                		<li><a href="#">Enlace Uno</a></li>
+                		<li><a href="#">Enlace Dos</a></li>
+                		<li class="divider"></li>
+                		<li><a href="#">Enlace Tres</a></li>
+              		</ul>
+            	</li>
+          <form class="pull-left" action="">
+          		<input placeholder="Search" type="text">
+          </form>
+          </ul>
+		</div>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+<div id="system_content" class="container">
+	<div id="sidebar">
+    	<div id="side_menu">
+        	<div id="panel">
+            	<div id="system_title">
+                Ferreteria Hermanos De Urrutia Hernandez
+                </div>
+                <div id="system_date">
+                3 de Octubre de 2011
+                </div>
+                
+                <div id="system_user">
+                Bienvenido usuario!
+                	<div id="system_user_log">
+                    	<div id="user_password">
+                        	<a href="#">Password</a>
+                        </div>
+                        <div id="user_logout">
+                        	<a href="#">Salir</a>
+                        </div>                    
+                    </div>
+                </div>
+                
+                <div id="estadisticas">
+                Ventas del dia
+                	<div id="cantidad">
+                    $ 4780.67
+                    </div>
+                </div>
+                
+                <div id="estadisticas">
+                Compras del dia
+                	<div id="cantidad">
+                    $ 683.55
+                    </div>
+                </div>
+                
+                <div id="menu">
+                	<h6>Opciones de Sistema</h6>
+                    <ul>
+                    	<li><a href="#">Articulos por agotarse</a></li>
+                        <li><a href="#">Creditos por vencer</a></li>
+                        <li><a href="#">Ultimas ventas</a></li>
+                        <li><a href="#">Ultimas compras</a></li>
+                    </ul>
+                </div>     
+            </div>
+        </div>
+                
+        <div id="side_apps">
+        	<div id="panel">
+            
+			  <div id="app">
+              	<div id="icon" class="ventas">
+                </div>
+                <div id="icon_desc">
+                	<a href="#">Nueva Venta</a>
+                </div>            
+           	  </div>
+              
+              <div id="app">
+              	<div id="icon" class="nuevo_articulo">
+                </div>
+                <div id="icon_desc">
+                	<a href="#">Nuevo Inventario</a>
+                </div>            
+           	  </div>
+              
+              <div id="app">
+              	<div id="icon" class="inventario">
+                </div>
+                <div id="icon_desc">
+                	<a href="#">Inventario</a>
+                </div>            
+           	  </div>
+              
+              <div id="app">
+              	<div id="icon" class="nuevo_proveedor">
+                </div>
+                <div id="icon_desc">
+                	<a href="#">Nuevo Proveedor</a>
+                </div>            
+           	  </div>
+              
+              <div id="app">
+              	<div id="icon" class="proveedores">
+                </div>
+                <div id="icon_desc">
+                	<a href="#">Proveedores</a>
+                </div>            
+           	  </div>
+              
+              <div id="app">
+              	<div id="icon" class="finanzas">
+                </div>
+                <div id="icon_desc">
+                	<a href="#">Finanzas</a>
+                </div>            
+           	  </div>
+
+        	</div>
+        </div>              
+        </div>    	
+        
+        <div id="system">
+    		<div id="panel">
+            	<div id="sistema">
+                	<div id="panel">
+                    
+                     <div class="alert-message error">
+                     	<a class="close" href="#">×</a>
+                     	<p><strong>fUCKYOU!</strong> Ha ocurrido un error.</p>
+                     </div>	
+                     
+                     <div class="alert-message success">
+                     	<a class="close" href="#">×</a>
+                     	<p><strong>FUCK YEAH!</strong> Registro pro.</p>
+                     </div>	
+                    
+                    
+                      <div id="mod_title" class="mod_add_venta">
+                      Nueva Venta
+                      </div>
+                      
+                      <div id="mod_content">
+                      
+                      	<div class="row">
+                        	<div id="venta_factura" class="span5">
+                            Factura No. <span>354</span>
+                            </div>
+                            <div id="venta_fecha" class="span5">
+                            15 de Octubre de 2011
+                            </div>
+                        </div>
+                        <div id="detsep"></div>
+                      
+                      
+						<div id="venta_form">
+                          <form action="" class="form-stacked">
+    
+                              <div class="clearfix">
+                                <label for="razon_social">Busca tu producto para agregarlo a la venta:</label>
+                                <div class="inline-inputs">
+                                  <div class="pull-left"><input class="xlarge span7" id="venta_buscaproducto" name="venta_buscaproducto" size="30" type="text"></div>
+                                  <input name="" type="button"  class="btn success" value="Agregar Producto" />
+                                 
+                                </div>                
+                              </div>
+                              <div id="detsep"></div>
+                              
+                              <div id="venta_detalle_content_title">
+                              	<div class="row">
+                                	<div class="span4">
+                                    Nombre del producto
+                                    </div>
+                                    <div class="span2">
+                                    Cantidad
+                                    </div>
+                                    <div class="span2">
+                                    Precio Unit.
+                                    </div>
+                                    <div class="span2">
+                                    Total Prod.
+                                    </div>                                	
+                                </div>	
+                              </div>
+                              <div id="venta_detalle_content">
+                              
+                              	<div id="venta_articulo" class="row">
+                                	<div class="span4">
+                                    DS343 - ALAMBRE DE COBRE TU MAMA
+                                    <input name="id_producto" type="hidden" id="id_producto" />
+                                    </div>
+                                    <div class="span2" >
+                                    56
+                                    <input name="cantidad" type="hidden" id="cantidad" />
+                                    </div>
+                                    <div class="span2">
+                                    $10.00
+                                    </div>
+                                    <div class="span2">
+                                    <input name="total_producto" type="hidden" id="total_producto" />
+                                    $560.00
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div id="venta_prod_sep" class="span10"></div>                                	
+                                </div>
+                                
+                                
+                                <div id="venta_articulo" class="row">
+                                	<div class="span4">
+                                    DS343 - ALAMBRE DE COBRE TU MAMA
+                                    <input name="id_producto" type="hidden" id="id_producto" />
+                                    </div>
+                                    <div class="span2" >
+                                    56
+                                    <input name="cantidad" type="hidden" id="cantidad" />
+                                    </div>
+                                    <div class="span2">
+                                    $10.00
+                                    </div>
+                                    <div class="span2">
+                                    <input name="total_producto" type="hidden" id="total_producto" />
+                                    $560.00
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div id="venta_prod_sep" class="span10"></div>                                	
+                                </div>                               
+                               
+                                
+                              </div>
+                              
+                              <div id="detsep"></div>
+                              <div id="venta_total_content">
+                              		<div id="venta_tot" class="row">
+                              			<div id="venta_total_mask" class="span5">
+                               			 SubTotal
+                               			 </div>
+                                		<div id="venta_total_cant" class="span5 subtotal">
+                               			 $ <span>3453.00</span>
+                                         <input name="subtotal" type="hidden" id="subtotal" />
+                                		</div>
+                              		</div>
+                                    <div id="venta_tot" class="row">
+                              			<div id="venta_total_mask" class="span5">
+                               			 IVA
+                               			 </div>
+                                		<div id="venta_total_cant" class="span5 iva">
+                               			 $ <span>565.00</span>
+                                         <input name="iva" type="hidden" id="iva" />
+                                		</div>
+                              		</div>
+                                    <div id="venta_tot_factura" class="row">
+                              			<div id="venta_total_factura" class="span5">
+                               			 Total
+                               			 </div>
+                                		<div id="venta_total_cant_factura" class="span5 total">
+                               			 $ <span>4453.00</span>
+                                         <input name="total" type="hidden" id="total" />
+                                		</div>
+                              		</div>
+                              </div>
+                        	  
+                              
+                             
+                              <div class="actions">
+                                <button type="submit" class="btn primary">Finalizar Venta</button>&nbsp;<button type="reset" class="btn">Cancelar</button>
+                              </div>
+                                                        
+                          </form>
+                        </div>
+                      
+                      </div>
+                      
+                      
+                    </div>
+                </div>                    		
+        	</div>    
+    	</div>
+        
+    </div>
+    
+</div>
+
+	
+</body>
+</html>
